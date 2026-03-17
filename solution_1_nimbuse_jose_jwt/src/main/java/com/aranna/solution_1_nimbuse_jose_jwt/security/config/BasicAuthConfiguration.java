@@ -17,8 +17,8 @@ public class BasicAuthConfiguration {
     SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) {
         return httpSecurity.authorizeHttpRequests(
                 customizer -> customizer
-                        .requestMatchers( "/user/signup",
-                                "/user/login")
+                        .requestMatchers( "/auth/signup",
+                                "/auth/login")
                         .permitAll()
                         .anyRequest()
                         .authenticated())
