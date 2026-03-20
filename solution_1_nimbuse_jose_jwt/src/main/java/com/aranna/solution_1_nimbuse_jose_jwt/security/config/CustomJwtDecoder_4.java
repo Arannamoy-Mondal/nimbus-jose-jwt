@@ -9,7 +9,7 @@ import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.jwk.RSAKey;
 
 @Configuration
-public class CustomJwtDecoder {
+public class CustomJwtDecoder_4 {
     // step-4: jwt decoder
     @Bean
     JwtDecoder jwtDecoder(RSAKey rsaKey) throws JOSEException {

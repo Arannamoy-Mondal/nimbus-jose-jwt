@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class CustomKeyPair {
+public class CustomKeyPair_1 {
     public static final Logger log = LoggerFactory.getLogger(BasicAuthConfiguration.class);
 
     // step-1: keypair generator

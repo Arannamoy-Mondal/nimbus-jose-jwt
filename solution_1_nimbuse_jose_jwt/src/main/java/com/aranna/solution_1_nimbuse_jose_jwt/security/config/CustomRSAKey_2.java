@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import com.nimbusds.jose.jwk.RSAKey;
 
 @Configuration
-public class CustomRSAKey {
+public class CustomRSAKey_2 {
     // step-2: create rsakey
     @Bean
     RSAKey rsaKey(KeyPair keyPair) {
