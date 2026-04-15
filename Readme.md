@@ -1,3 +1,9 @@
+### Create shared key
+
+```bash
+openssl rand -base64 64
+```
+
 ### Signup
 
 <img src="./Images/1 SignUp.png">
