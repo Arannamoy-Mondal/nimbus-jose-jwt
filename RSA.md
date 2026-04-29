@@ -49,18 +49,7 @@ If we want to encrypt the message $M = 65$:
 *   **Encrypt:** $C = 65^{17} \pmod{3233} = 2790$.
 *   **Decrypt:** $M = 2790^{2753} \pmod{3233} = 65$.
 
-To really get a feel for how the variables interact and how changing the primes alters the keys and the modular boundaries, I've built an interactive simulator below. You can adjust the prime inputs and the message to see the key generation and encryption/decryption cycles calculated in real-time.
 
-<GenerateWidget height="600px" component_placeholder_id="im_55b66fbef6957067">
-```json
-{
-  "widgetSpec": {
-    "height": "600px",
-    "prompt": "Create an interactive RSA algorithm simulator. Objective: Allow the user to input two prime numbers (p and q) and a numeric message (M) to visualize the RSA key generation, encryption, and decryption process. Data State: initialValues { p: 11, q: 13, message: 7 }. Strategy: Form Layout. Inputs: Numeric inputs for Prime p, Prime q, and Message M. Behavior: Validate that inputs p and q are prime numbers, and that M is an integer less than (p*q). If inputs are invalid, display an error message. If valid, automatically calculate the modulus (n = p*q) and Euler's totient (phi = (p-1)*(q-1)). Find the smallest valid public exponent (e) that is coprime to phi. Calculate the private exponent (d) as the modular inverse of e modulo phi. Display the computed Public Key (n, e) and Private Key (n, d) distinctly. Below the keys, show a step-by-step calculation block: First, show the Encryption step calculating Ciphertext C = (M^e) mod n. Second, show the Decryption step calculating Decrypted Message = (C^d) mod n, demonstrating that it returns the original M. Layout the inputs logically at the top, followed by the computed keys, and then the encryption/decryption proof at the bottom. Use the math.js library to handle the modular exponentiation safely."
-  }
-}
-```
-</GenerateWidget>
 
 
 **RSA (Rivest-Shamir-Adleman) অ্যালগরিদম** হলো আধুনিক সাইবার সিকিউরিটি এবং সুরক্ষিত যোগাযোগের একটি অন্যতম গুরুত্বপূর্ণ 'অ্যাসিমেট্রিক ক্রিপ্টোগ্রাফিক' (asymmetric cryptographic) প্রোটোকল।
@@ -112,15 +101,5 @@ $$M \equiv C^d \pmod{n}$$
 *   **এনক্রিপ্ট:** $C = 65^{17} \pmod{3233} = 2790$।
 *   **ডিক্রিপ্ট:** $M = 2790^{2753} \pmod{3233} = 65$।
 
-পুরো প্রক্রিয়াটি হাতে-কলমে দেখার জন্য নিচে বাংলায় একটি ইন্টারেক্টিভ সিমুলেটর দেওয়া হলো। আপনি নিজের ইচ্ছামতো মৌলিক সংখ্যা ও মেসেজ বসিয়ে দেখতে পারেন কীভাবে এনক্রিপশন ও ডিক্রিপশন কাজ করে।
 
-<GenerateWidget height="600px" component_placeholder_id="im_55fb2233cc26fc69">
-```json
-{
-  "widgetSpec": {
-    "height": "600px",
-    "prompt": "Create an interactive RSA algorithm simulator in Bengali. Objective: Allow the user to input two prime numbers (p and q) and a numeric message (M) to visualize the RSA key generation, encryption, and decryption process. All titles, text, and labels MUST be in Bengali. Data State: initialValues { p: 11, q: 13, message: 7 }. Strategy: Form Layout. Inputs: Numeric inputs for 'মৌলিক সংখ্যা p' (Prime p), 'মৌলিক সংখ্যা q' (Prime q), and 'মেসেজ M' (Message M). Behavior: Validate that inputs p and q are prime numbers, and that M is an integer less than (p*q). If inputs are invalid, display an error message in Bengali. If valid, automatically calculate modulus (n = p*q) and Euler's totient (phi = (p-1)*(q-1)). Find the smallest valid public exponent (e) that is coprime to phi. Calculate the private exponent (d) as the modular inverse of e modulo phi. Display the computed 'পাবলিক কি' (n, e) and 'প্রাইভেট কি' (n, d) distinctly. Below the keys, show a step-by-step calculation block: First, show the 'এনক্রিপশন' (Encryption) step calculating Ciphertext C = (M^e) mod n. Second, show the 'ডিক্রিপশন' (Decryption) step calculating Decrypted Message = (C^d) mod n, demonstrating that it returns the original M. Use the math.js library to handle the modular exponentiation safely."
-  }
-}
-```
 </GenerateWidget>
